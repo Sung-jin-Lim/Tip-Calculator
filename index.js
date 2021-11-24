@@ -27,13 +27,15 @@ customTip.addEventListener("change", calculateTip);
 
 // buttons
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 6; i++) {
   tip[i].addEventListener("click", function () {
     tip[0].classList.remove("focus");
     tip[1].classList.remove("focus");
     tip[2].classList.remove("focus");
     tip[3].classList.remove("focus");
     tip[4].classList.remove("focus");
+    tip[5].classList.remove("focus");
+
     tip[i].classList.add("focus");
 
     calculateTip();
@@ -52,12 +54,21 @@ function calculateTip() {
       errorMessage.classList.remove("invis");
     } else {
       errorMessage.classList.add("invis");
-      if (customTip.value > 0) {
+      if (customTip.classList.contains("focus") && customTip.value > 0) {
         let tipPercent = customTip.value;
-        console.log(tipPercent, billAmount, peopleCount);
+        tipAmount.innerHTML = (
+          (billAmount * (tipPercent / 100)) /
+          peopleCount
+        ).toFixed(2);
+        console.log(tipAmount);
       } else {
         let tipPercent = parseFloat(document.querySelector(".focus").innerHTML);
-        console.log(tipPercent, billAmount, peopleCount);
+        tipAmount.innerHTML =
+          "$" + ((billAmount * (tipPercent / 100)) / peopleCount).toFixed(2);
+        console.log(tipAmount);
+
+        totalAmount.innerHTML =
+          "$" + billAmount + billAmount * (tipPercent / 100) * peopleCount;
       }
     }
   }
