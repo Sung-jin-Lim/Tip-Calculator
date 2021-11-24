@@ -1,0 +1,243 @@
+// colors
+
+$verydarkcyan: hsl(183, 100%, 15%);
+$darkgrayishcyan: hsl(186, 14%, 43%);
+$darkgrayishcyan: hsl(184, 14%, 56%);
+$grayishcyan: hsl(185, 41%, 84%);
+$lightgrayishcyan: hsl(189, 41%, 97%);
+$cyan: hsl(174, 56%, 74%);
+$brightCyan: hsl(172, 57%, 46%);
+$white: hsl(0, 0%, 100%);
+
+// attribution
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+// body
+
+body {
+  height: 100%;
+  width: 100%;
+  size: 24px;
+  background-color: $grayishcyan;
+  font-family: "Space Mono", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  width: 45%;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  border-radius: 1rem;
+  color: $verydarkcyan;
+
+  input {
+    font-family: "Space Mono", monospace;
+    width: 100%;
+    height: 2.5rem;
+    border: 0;
+    background-color: $lightgrayishcyan;
+    border-radius: 5px;
+    font-weight: 700;
+
+    &:focus {
+      outline: 2px solid $brightCyan;
+    }
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.left {
+  display: inline-block;
+  .desc {
+    font-size: 0.8rem;
+    margin: 0.8rem 0;
+    font-weight: bold;
+    color: $darkgrayishcyan;
+  }
+
+  .wrapper {
+    /* Ensures that the div only takes up the same space as the input box*/
+    display: inline-block;
+    position: relative;
+    width: 100%;
+  }
+
+  span {
+    color: $darkgrayishcyan;
+
+    position: absolute;
+    /* Match the padding applied to the input box */
+    left: 0.7rem;
+    top: 0.3rem;
+    /* Makes the element invisible to the mouse */
+    pointer-events: none;
+    font-size: 1.2rem;
+  }
+  // input with money class
+  .money {
+    color: $verydarkcyan;
+    /* Arbritary padding, make sure to match with the .float-text */
+    text-align: right;
+    padding-right: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    &::placeholder {
+      color: $darkgrayishcyan;
+    }
+  }
+
+  .tipGrid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  .tips {
+    font-family: "Space Mono", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $verydarkcyan;
+    border-radius: 5px;
+    color: $lightgrayishcyan;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: none;
+
+    &.focus {
+      background-color: $brightCyan;
+      color: $verydarkcyan;
+    }
+
+    &.custom {
+      background-color: $lightgrayishcyan;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      color: $verydarkcyan;
+      padding: 0.7rem;
+      text-align: right;
+      font-size: 1.2rem;
+
+      &::placeholder {
+        text-align: center;
+        font-size: 1.2rem;
+        color: $darkgrayishcyan;
+      }
+    }
+  }
+}
+
+// error message
+.oneLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  div.error {
+    color: hsla(0, 100%, 64%, 0.911);
+  }
+}
+
+// invis class that div.error will take
+.invis {
+  opacity: 0;
+}
+
+// class js active
+.active {
+  background-color: $lightgrayishcyan;
+}
+
+// tip grid and wrapper bottom margin
+.tipGrid,
+.wrapper {
+  margin-bottom: 1rem;
+}
+
+// right section
+.right {
+  background-color: $verydarkcyan;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .top {
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .tipTotal,
+  .tipAmount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $brightCyan;
+  }
+
+  .desc {
+    color: white;
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  p {
+    color: $darkgrayishcyan;
+    margin: 0;
+    font-size: 0.7rem;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 0.9rem;
+    color: $verydarkcyan;
+    font-weight: 700;
+    height: 2rem;
+    border-radius: 0.3rem;
+    background-color: $cyan;
+    text-decoration: none;
+    border: none;
+    padding: 1.3rem;
+  }
+}

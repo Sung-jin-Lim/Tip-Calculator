@@ -1,0 +1,317 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  size: 24px;
+  background-color: #c5e4e7;
+  font-family: "Space Mono", monospace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  width: 45%;
+  padding: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1;
+      grid-template-rows: 1;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  border-radius: 1rem;
+  color: #00494d;
+}
+
+.container input {
+  font-family: "Space Mono", monospace;
+  width: 100%;
+  height: 2.5rem;
+  border: 0;
+  background-color: #f4fafa;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.container input:focus {
+  outline: 2px solid #32b8a6;
+}
+
+.container input::-webkit-outer-spin-button,
+.container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.left {
+  display: inline-block;
+}
+
+.left .desc {
+  font-size: 0.8rem;
+  margin: 0.8rem 0;
+  font-weight: bold;
+  color: #7f9c9f;
+}
+
+.left .wrapper {
+  /* Ensures that the div only takes up the same space as the input box*/
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.left span {
+  color: #7f9c9f;
+  position: absolute;
+  /* Match the padding applied to the input box */
+  left: 0.7rem;
+  top: 0.3rem;
+  /* Makes the element invisible to the mouse */
+  pointer-events: none;
+  font-size: 1.2rem;
+}
+
+.left .money {
+  color: #00494d;
+  /* Arbritary padding, make sure to match with the .float-text */
+  text-align: right;
+  padding-right: 0.5rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.2rem;
+}
+
+.left .money::-webkit-input-placeholder {
+  color: #7f9c9f;
+}
+
+.left .money:-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+.left .money::-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+.left .money::placeholder {
+  color: #7f9c9f;
+}
+
+.left .tipGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.left .tips {
+  font-family: "Space Mono", monospace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #00494d;
+  border-radius: 5px;
+  color: #f4fafa;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.left .tips.focus {
+  background-color: #32b8a6;
+  color: #00494d;
+}
+
+.left .tips.custom {
+  background-color: #f4fafa;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #00494d;
+  padding: 0.7rem;
+  text-align: right;
+  font-size: 1.2rem;
+}
+
+.left .tips.custom::-webkit-input-placeholder {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f9c9f;
+}
+
+.left .tips.custom:-ms-input-placeholder {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f9c9f;
+}
+
+.left .tips.custom::-ms-input-placeholder {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f9c9f;
+}
+
+.left .tips.custom::placeholder {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f9c9f;
+}
+
+.oneLine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.oneLine div.error {
+  color: rgba(255, 71, 71, 0.911);
+}
+
+.invis {
+  opacity: 0;
+}
+
+.active {
+  background-color: #f4fafa;
+}
+
+.tipGrid,
+.wrapper {
+  margin-bottom: 1rem;
+}
+
+.right {
+  background-color: #00494d;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.right .top {
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.right .tipTotal,
+.right .tipAmount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.right .number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #32b8a6;
+}
+
+.right .desc {
+  color: white;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.right p {
+  color: #7f9c9f;
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+.right button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #00494d;
+  font-weight: 700;
+  height: 2rem;
+  border-radius: 0.3rem;
+  background-color: #98e2da;
+  text-decoration: none;
+  border: none;
+  padding: 1.3rem;
+}
+/*# sourceMappingURL=style.css.map */
