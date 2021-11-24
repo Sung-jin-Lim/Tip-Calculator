@@ -21,6 +21,7 @@ tip.forEach;
 
 billAmount.addEventListener("change", calculateTip);
 peopleCount.addEventListener("change", calculateTip);
+customTip.addEventListener("change", calculateTip);
 
 // add class 2 one button and remvoe it from all other buttons\
 
@@ -42,7 +43,7 @@ for (let i = 0; i < 5; i++) {
 function calculateTip() {
   let billAmount = document.querySelector("#bill").value;
   let peopleCount = document.querySelector("#peopleCount").value;
-  let tipAmount = document.querySelector("#tipAmount").innerHTML;
+  let tipAmount = document.querySelector("#tipAmount");
   let totalAmount = document.querySelector("#total").innerHTML;
   let customTip = document.querySelector(".custom");
   // error message
@@ -53,10 +54,10 @@ function calculateTip() {
       errorMessage.classList.add("invis");
       if (customTip.value > 0) {
         let tipPercent = customTip.value;
-        console.log(tipPercent);
+        console.log(tipPercent, billAmount, peopleCount);
       } else {
-        let tipPercent = document.querySelector(".focus").innerHTML;
-        console.log(tipPercent);
+        let tipPercent = parseFloat(document.querySelector(".focus").innerHTML);
+        console.log(tipPercent, billAmount, peopleCount);
       }
     }
   }
