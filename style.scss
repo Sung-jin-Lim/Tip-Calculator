@@ -241,3 +241,22 @@ body {
     padding: 1.3rem;
   }
 }
+
+// reset button
+
+.inactive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 0.9rem;
+  color: $verydarkcyan;
+  font-weight: 700;
+  height: 2rem;
+  border-radius: 0.3rem;
+  background-color: $cyan;
+  text-decoration: none;
+  border: none;
+  padding: 1.3rem;
+  opacity: 0.2;
+}

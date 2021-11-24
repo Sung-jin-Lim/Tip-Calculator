@@ -314,4 +314,27 @@ body {
   border: none;
   padding: 1.3rem;
 }
+
+.inactive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #00494d;
+  font-weight: 700;
+  height: 2rem;
+  border-radius: 0.3rem;
+  background-color: #98e2da;
+  text-decoration: none;
+  border: none;
+  padding: 1.3rem;
+  opacity: 0.2;
+}
 /*# sourceMappingURL=style.css.map */
