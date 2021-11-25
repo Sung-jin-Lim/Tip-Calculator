@@ -69,10 +69,12 @@ function calculateTip() {
           "$" + ((billAmount * (tipPercent / 100)) / peopleCount).toFixed(2);
         console.log(tipAmount);
 
-        totalAmount.innerHTML = Math.round(
-          +billAmount / +peopleCount +
-            (+billAmount * +(tipPercent / 100)) / +peopleCount
-        );
+        totalAmount.innerHTML =
+          "$" +
+          Math.round(
+            +billAmount / +peopleCount +
+              (+billAmount * +(tipPercent / 100)) / +peopleCount
+          );
         // "$" + ((billAmount * (tipPercent / 100)) / peopleCount).toFixed(2);
       }
     }
