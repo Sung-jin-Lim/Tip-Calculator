@@ -48,8 +48,7 @@ function calculateTip() {
       errorMessage.classList.remove("invis");
     } else {
       errorMessage.classList.add("invis");
-      if (customTip.classList.contains("focus") && customTip.value > 0) {
-        // tip amount
+      if (customTip.classList.contains("focus") && customTip.value < 1) {
         let tipPercent = customTip.value;
         tipAmount.innerHTML = (
           (billAmount * (tipPercent / 100)) /
@@ -57,11 +56,27 @@ function calculateTip() {
         ).toFixed(2);
         console.log(tipAmount);
 
-        // total amount
         totalAmount.innerHTML = Math.round(
           +billAmount / +peopleCount +
             (+billAmount * +(tipPercent / 100)) / +peopleCount
         );
+
+        // total amount
+        totalAmount.innerHTML = Math.round(+billAmount / +peopleCount);
+      } else if (customTip.classList.contains("focus") && customTip.value > 0) {
+        // tip amount
+        let tipPercent = customTip.value;
+        tipAmount.innerHTML =
+          "$" + ((billAmount * (tipPercent / 100)) / peopleCount).toFixed(2);
+        console.log(tipAmount);
+
+        // total amount
+        totalAmount.innerHTML =
+          "$" +
+          Math.round(
+            +billAmount / +peopleCount +
+              (+billAmount * +(tipPercent / 100)) / +peopleCount
+          );
       } else {
         // tip amount
         let tipPercent = parseFloat(document.querySelector(".focus").innerHTML);
@@ -82,9 +97,12 @@ function calculateTip() {
 
   if (totalAmount.innerHTML > 0) {
     document.querySelector(".reset").classList.remove("inactive");
+    document.querySelector(".reset").addEventListener("click", function () {
+      console.log("yes");
+      reload();
+    });
+  } else {
+    document.querySelector(".reset").classList.add("inactive");
+    document.querySelector(".reset").removeEventListener("click");
   }
 }
-
-document.querySelector(".reset").addEventListener(click, function () {
-  reload();
-});
