@@ -93,16 +93,24 @@ function calculateTip() {
         // "$" + ((billAmount * (tipPercent / 100)) / peopleCount).toFixed(2);
       }
     }
+  } else {
+    totalAmount.innerHTML = "$" + "0";
+    tipAmount.innerHTML = "$" + "0";
+    checkReset();
   }
-
-  if (totalAmount.innerHTML > 0) {
+  checkReset();
+}
+function checkReset() {
+  let currency = totalAmount.innerHTML.replace(/[$,]+/g, "");
+  if (parseFloat(currency) > 0) {
     document.querySelector(".reset").classList.remove("inactive");
     document.querySelector(".reset").addEventListener("click", function () {
-      console.log("yes");
-      reload();
+      window.top.location = window.top.location;
     });
   } else {
     document.querySelector(".reset").classList.add("inactive");
-    document.querySelector(".reset").removeEventListener("click");
+    document.querySelector(".reset").removeEventListener("click", function () {
+      console.log("yes");
+    });
   }
 }
