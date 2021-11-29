@@ -45,8 +45,9 @@ body {
 
 .container {
   background-color: white;
-  width: 45%;
   padding: 2rem;
+  width: 45%;
+  min-width: 411.112px;
   display: grid;
   grid-template-rows: 1;
   grid-template-columns: 1fr 1fr;
@@ -192,7 +193,6 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-
   .top {
     height: 50%;
     display: flex;
@@ -260,3 +260,6 @@ body {
   padding: 1.3rem;
   opacity: 0.2;
 }
+
+// media mobile
+@import "mobile";

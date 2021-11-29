@@ -1,0 +1,22 @@
+@media only screen and (max-width: 768px) {
+  .container {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 2;
+    grid-template-columns: none;
+    gap: 1rem;
+    min-width: 0;
+  }
+
+  .left {
+    .tipGrid {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .inactive {
+    margin-top: 2rem;
+  }
+}

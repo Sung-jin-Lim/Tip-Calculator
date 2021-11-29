@@ -38,8 +38,9 @@ body {
 
 .container {
   background-color: white;
-  width: 45%;
   padding: 2rem;
+  width: 45%;
+  min-width: 411.112px;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1;
@@ -336,5 +337,30 @@ body {
   border: none;
   padding: 1.3rem;
   opacity: 0.2;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    -ms-grid-rows: 2;
+        grid-template-rows: 2;
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    gap: 1rem;
+    min-width: 0;
+  }
+  .left .tipGrid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .inactive {
+    margin-top: 2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
